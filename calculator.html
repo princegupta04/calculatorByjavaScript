@@ -1,0 +1,165 @@
+<html lang="en">
+
+<head>
+
+    <title>calculator</title>
+
+    <style>
+        body {
+            margin:2px;
+            padding: 2px;
+            background-image: url(cyb.webp);
+            background-size: cover;
+            opacity: 50;    
+        }
+        h1{
+            color:white;
+             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;     
+        }
+        input[type=button]{
+            text-align: center;
+            width: 60px;
+            height: 40px;
+        }
+
+       
+    </style>
+    <script>
+        function get1() {
+            document.getElementById("input").value += "1";
+        }
+
+        function get2() {
+            document.getElementById("input").value += "2";
+        }
+
+        function get3() {
+            document.getElementById("input").value += "3";
+        }
+
+        function get4() {
+            document.getElementById("input").value += "4";
+        }
+        function get5() {
+            document.getElementById("input").value += "5";
+        }
+
+        function get6() {
+            document.getElementById("input").value += "6";
+        }
+
+        function get7() {
+            document.getElementById("input").value += "7";
+        }
+
+        function get8() {
+            document.getElementById("input").value += "8";
+        }
+
+        function get9() {
+            document.getElementById("input").value += "9";
+        }
+
+        function get0() {
+            document.getElementById("input").value += "0";
+        }
+
+        function get_mod() {
+            document.getElementById("input").value += "%";
+        }
+
+        function get_plus() {
+            document.getElementById("input").value += "+";
+        }
+        function get_minus() {
+            document.getElementById("input").value += "-";
+
+        }
+        function get_multi() {
+            document.getElementById("input").value += "*";
+        }
+
+        function get_dot() {
+            document.getElementById("input").value += ".";
+        }
+
+        function doeval() {
+            var res = document.getElementById("input").value;
+            var res2 = eval(res);
+            document.getElementById("input").value = res2;
+
+
+        }
+        function doClear() {
+    
+            document.getElementById("input").value = "";
+        }
+
+        function get_del()
+        {
+            var res = document.getElementById("input").value;
+            var len=res.length;
+            document.getElementById("input").value=res.slice(0,len-1);
+        }
+        
+    </script>
+    
+
+
+
+</head>
+
+<body>
+    <h1 align-text="center">MADE BY PRINCE GUPTA</h1>
+    <center>
+        <table  border="2">
+                <tr>
+                    <td colspan="4">
+                        <input type="text" id="input">
+                    </td>
+                </tr>
+                
+                   
+                <tr>
+                    <td><input type="button" value="c" onclick="doClear();"></td>
+                    <td><input type="button" value="del" onclick="get_del();">
+                    <td><input type="button" value="%" onclick="get_mod();"></td>
+                    <td><input type="button" value="/" onclick="get_div();">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="7" onclick="get7();"></td>
+                    <td><input type="button" value="8" onclick="get8();"></td>
+                    <td><input type="button" value="9" onclick="get9();"></td>
+                    <td><input type="button" value="*" onclick="get_multi();"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="4" onclick="get4();"></td>
+                    <td><input type="button" value="5" onclick="get5();"></td>
+                    <td><input type="button" value="6" onclick="get6();"></td>
+                    <td><input type="button" value="-" onclick="get_minus();"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="1" onclick="get1();"></td>
+                    <td><input type="button" value="2" onclick="get2();"></td>
+                    <td><input type="button" value="3" onclick="get3();"></td>
+                    <td><input type="button" value="+" onclick="get_plus();"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="button" value="0" onclick="get0();"></td>
+                    <td><input type="button" value="." onclick="get_dot();"></td>
+                    <td><input type="button" value="=" onclick="doeval();"></td>
+                </tr>
+            </table>
+
+
+        </div>
+    </center>
+
+</body>
+
+</html>
